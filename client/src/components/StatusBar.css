@@ -1,0 +1,35 @@
+.status-bar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 0 20px;
+  height: 32px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  transition: background-color var(--transition-normal);
+}
+
+.status-label {
+  color: var(--text-muted);
+}
+
+.footer-logo {
+  margin-left: auto;
+  color: var(--text-muted);
+}

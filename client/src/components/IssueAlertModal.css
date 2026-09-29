@@ -1,0 +1,233 @@
+/* ============================================================
+   IssueAlertModal.css — Styles for the Issue Alert Modal
+   ============================================================ */
+
+.issue-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.issue-modal-card {
+  background: linear-gradient(145deg, #161b22, #0d1117);
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 28px;
+  width: 100%;
+  max-width: 640px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow:
+    0 0 0 1px rgba(255, 123, 114, 0.2),
+    0 32px 64px rgba(0, 0, 0, 0.5),
+    0 0 80px rgba(255, 123, 114, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: slideUpModal 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUpModal {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Header */
+.issue-modal-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.issue-modal-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.issue-modal-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ff7b72;
+  margin: 0 0 4px;
+}
+
+.issue-modal-subtitle {
+  font-size: 12px;
+  color: #8b949e;
+  margin: 0;
+}
+
+/* Issue List */
+.issue-modal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.issue-modal-list::-webkit-scrollbar { width: 4px; }
+.issue-modal-list::-webkit-scrollbar-track { background: transparent; }
+.issue-modal-list::-webkit-scrollbar-thumb { background: #30363d; border-radius: 4px; }
+
+.issue-modal-item {
+  border-radius: 10px;
+  padding: 12px 14px;
+  border-left: 3px solid transparent;
+  background: rgba(255, 255, 255, 0.03);
+  transition: background 0.2s;
+}
+
+.issue-modal-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.issue-modal-item.severity-critical {
+  border-left-color: #ff7b72;
+  background: rgba(255, 123, 114, 0.05);
+}
+
+.issue-modal-item.severity-warning {
+  border-left-color: #e3b341;
+  background: rgba(227, 179, 65, 0.05);
+}
+
+.issue-modal-item.severity-info {
+  border-left-color: #58a6ff;
+  background: rgba(88, 166, 255, 0.05);
+}
+
+.issue-modal-item-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.issue-sev-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.issue-item-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e6edf3;
+  flex: 1;
+}
+
+.issue-line-badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: rgba(139, 148, 158, 0.15);
+  color: #8b949e;
+}
+
+.issue-item-desc {
+  font-size: 12px;
+  color: #8b949e;
+  margin: 0 0 6px;
+  line-height: 1.5;
+}
+
+.issue-item-suggestion {
+  font-size: 11px;
+  color: #3fb950;
+  background: rgba(63, 185, 80, 0.07);
+  border-radius: 6px;
+  padding: 6px 10px;
+  line-height: 1.5;
+}
+
+/* User Input Section */
+.issue-modal-input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.issue-modal-label {
+  font-size: 13px;
+  color: #e6edf3;
+  font-weight: 500;
+}
+
+.issue-modal-textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #e6edf3;
+  font-size: 12px;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.issue-modal-textarea::placeholder {
+  color: #484f58;
+}
+
+.issue-modal-textarea:focus {
+  border-color: #58a6ff;
+  background: rgba(88, 166, 255, 0.05);
+}
+
+/* Action Buttons */
+.issue-modal-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.issue-modal-btn {
+  flex: 1;
+  min-width: 160px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.3px;
+}
+
+.btn-fix {
+  background: linear-gradient(135deg, #ff7b72, #c23b2e);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(255, 123, 114, 0.25);
+}
+
+.btn-fix:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 123, 114, 0.4);
+}
+
+.btn-proceed {
+  background: linear-gradient(135deg, #238636, #2ea043);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(46, 160, 67, 0.25);
+}
+
+.btn-proceed:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 160, 67, 0.4);
+}
+
+.issue-modal-btn:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,127 @@
+/* ============================================================
+   UserInputPanel.css
+   ============================================================ */
+
+.user-input-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid #21262d;
+  border-bottom: 1px solid #21262d;
+}
+
+.uip-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.uip-title-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.uip-icon {
+  font-size: 11px;
+  color: #3fb950;
+}
+
+.uip-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #e6edf3;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.uip-fn {
+  font-size: 11px;
+  color: #79c0ff;
+  background: rgba(121, 192, 255, 0.08);
+  padding: 2px 8px;
+  border-radius: 20px;
+  border: 1px solid rgba(121, 192, 255, 0.2);
+}
+
+.uip-fn em {
+  font-style: normal;
+  color: #a5d6ff;
+}
+
+.uip-example-toggle {
+  background: rgba(139, 148, 158, 0.1);
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #8b949e;
+  font-size: 11px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.uip-example-toggle:hover {
+  background: rgba(139, 148, 158, 0.2);
+  color: #e6edf3;
+}
+
+.uip-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.uip-example-chip {
+  background: rgba(121, 192, 255, 0.07);
+  border: 1px solid rgba(121, 192, 255, 0.25);
+  color: #79c0ff;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.uip-example-chip:hover {
+  background: rgba(121, 192, 255, 0.18);
+  border-color: #79c0ff;
+}
+
+.uip-input-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.uip-input {
+  flex: 1;
+  background: rgba(13, 17, 23, 0.8);
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #e6edf3;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.uip-input::placeholder {
+  color: #484f58;
+}
+
+.uip-input:focus {
+  border-color: #58a6ff;
+  background: rgba(88, 166, 255, 0.04);
+}
+
+.uip-hint {
+  font-size: 11px;
+  color: #484f58;
+  margin: 0;
+  line-height: 1.5;
+}

@@ -1,0 +1,62 @@
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 20px;
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.analyze-button {
+  width: 100%;
+  max-width: 400px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  color: var(--bg-primary);
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 4px 15px rgba(88, 166, 255, 0.2);
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.analyze-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(188, 140, 255, 0.35);
+  filter: brightness(1.15);
+}
+
+.analyze-button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.analyze-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.analyze-button.loading {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  box-shadow: none;
+}
+
+.analyze-button.error {
+  background: var(--accent-red);
+  color: var(--text-primary);
+  box-shadow: 0 4px 15px var(--accent-red-glow);
+}
+
+.shortcut-tip {
+  font-size: 11px;
+  color: var(--text-secondary);
+}

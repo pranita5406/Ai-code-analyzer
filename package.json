@@ -1,0 +1,16 @@
+{
+  "name": "codepulse-ai",
+  "version": "1.0.0",
+  "description": "CodePulse AI — Grammarly for Code. Static analysis + AI-driven code review.",
+  "private": true,
+  "scripts": {
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "dev": "npx concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "install:all": "cd client && npm install && cd ../server && npm install",
+    "build": "cd client && npm run build"
+  },
+  "keywords": ["code-analysis", "ai", "gemini", "ast", "static-analysis", "developer-tools"],
+  "author": "",
+  "license": "MIT"
+}
