@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: ai-code-analyzer-backend
+    env: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: CLIENT_URL
+        sync: false
+        # Add your other secrets (Supabase, Gemini, Redis) via Render UI
